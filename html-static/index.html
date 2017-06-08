@@ -22,7 +22,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
-  <link rel="stylesheet" media="screen" href="css/style.css" >
+  <link rel="stylesheet" media="screen" href="assets/css/style.css" >
 
 </head>
 
@@ -32,27 +32,29 @@
   <div class="container">
 
     <!-- header start here -->
-    <header>
-      <h1>
-        <a href="index.html" title="WHISQ"><img src="" alt="WHISQ"></a>
-      </h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="#" title="Who We Are">who we are</a>
-          </li>
-          <li>
-            <a href="#" title="Products">products</a>
-          </li>
-          <li><a href="#" title="Locate Us">locate us</a></li>
-          <li><a href="#" title="Recipes">recipes</a></li>                    
-        </ul>
-      </nav>
-      <div class="serch">
-        <form action="#" method="post">
-          <input type="text" name="text"/>
-          <button type="button" name="btn"/>
-        </form>
+    <header class="cf">
+      <div class="wrapper cf">
+        <h1>
+          <a href="index.html" title="WHISQ"><img src="assets/images/WHISQ-logo.png" alt="WHISQ"></a>
+        </h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="#" title="Who We Are">who we are</a>
+            </li>
+            <li>
+              <a href="#" title="Products">products</a>
+            </li>
+            <li><a href="#" title="Locate Us">locate us</a></li>
+            <li><a href="#" title="Recipes">recipes</a></li>                    
+          </ul>
+        </nav>
+        <div class="search">
+          <form action="#" method="post">
+            <input type="text" class="input-control" name="text"/>
+            <button type="button" class="input-control" name="btn"><img src="assets/images/search.png" alt="search"></button>
+          </form>
+        </div>
       </div>
     </header>
     <!-- header end here -->
@@ -63,6 +65,9 @@
       <div class="slider-top">
         <ul>
           <li>
+            <img src="assets/images/slide.jpg" alt="Slide"/>
+          </li>
+<!--           <li>
             <img src="" alt=""/>
             <div class="slide-content">
               <h2>Lorem Ipsum is simply</h2>
@@ -85,15 +90,7 @@
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
               <a href="#" title="Know More">know more</a>
             </div>
-          </li>
-          <li>
-            <img src="" alt=""/>
-            <div class="slide-content">
-              <h2>Lorem Ipsum is simply</h2>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="#" title="Know More">know more</a>
-            </div>
-          </li>                    
+          </li>  -->                   
         </ul>
         <ul class="slide-button">
           <li></li>
@@ -105,30 +102,30 @@
       <!-- header slider end here -->
       <!-- service section start from here-->
       <div class="service">
-        <div class="wrapper">
+        <div class="wrapper cf">
           <div class="box service-box">
             <div class="img">
-              <img src="" alt=""/>
-              <h3>mixing bowl</h3>
+              <img src="assets/images/mixing-bowl.png" alt="mixing bowl"/>
             </div>
+            <h3>mixing bowl</h3>
           </div>
           <div class="box service-box">
             <div class="img">
-              <img src="" alt=""/>
-              <h3>mixing bowl</h3>
+              <img src="assets/images/spatulas.png" alt="spatulas"/>
             </div>
+            <h3>spatulas</h3>
           </div>
           <div class="box service-box">
             <div class="img">
-              <img src="" alt=""/>
-              <h3>mixing bowl</h3>
+              <img src="assets/images/pans.png" alt="pans"/>
             </div>
+            <h3>pans</h3>
           </div>
           <div class="box service-box">
             <div class="img">
-              <img src="" alt=""/>
-              <h3>mixing bowl</h3>
+              <img src="assets/images/mixing-bowl.png" alt="mixing bowl"/>
             </div>
+            <h3>mixing bowl</h3>
           </div>                              
         </div>
       </div>
@@ -137,6 +134,16 @@
       <div class="quote-slider">
         <ul>
           <li>
+            <img src="assets/images/quote.jpg" alt="quote"/>
+            <div class="quote-content">
+     <!--          <div class="quote-icon">
+                <img src="assets/images/quote-icon.png" alt="quote-icon">
+              </div> -->
+              <p>You don't have to cook fancy or complicated masterpieces - just good food from fresh ingredients.</p>
+              <p class="name">JULIA CHILD</p>
+            </div>
+          </li>
+ <!--          <li>
             <img src="" alt=""/>
             <div class="quote-content">
               <div class="quote-icon">
@@ -155,17 +162,7 @@
               <p></p>
               <p class="name"></p>
             </div>
-          </li>
-          <li>
-            <img src="" alt=""/>
-            <div class="quote-content">
-              <div class="quote-icon">
-                <img src="" alt="">
-              </div>
-              <p></p>
-              <p class="name"></p>
-            </div>
-          </li>                    
+          </li>   -->                  
         </ul>
         <ul class="slide-button">
           <li></li>
@@ -177,36 +174,37 @@
       <!-- feature product section start here -->
       <div class="feature-products">
         <div class="wrapper">
-         <h2>feature product</h2>
-         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-         <ul class="tab">
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
+         <h2 class="heading">feature product</h2>
+         <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati
+         </p>
+         <ul class="tab cf">
+           <li>pans</li>
+           <li>spatulas</li>
+           <li>mixings bowls</li>
+           <li>bakery accesories</li>
          </ul>
          <div class="tab-details">
            <div class="tab-content">
              <div class="product">
-              <img src="" alt=""/>
-              <p class="product-name"></p>
-              <p class="product-price"></p>
+              <img src="assets/images/Amazon_41.png" alt="Amazon_41"/>
+              <p class="product-name">Amazon_41</p>
+              <p class="product-price">Rs. 1,350/-</p>
               <a class="more" title="Know More">know more</a>
              </div>
            </div>
            <div class="tab-content">
              <div class="product">
-              <img src="" alt=""/>
-              <p class="product-name"></p>
-              <p class="product-price"></p>
+              <img src="assets/images/Amazon_35.png" alt="Amazon_35"/>
+              <p class="product-name">Amazon_35</p>
+              <p class="product-price">Rs. 1,350/-</p>
               <a class="more" title="Know More">know more</a>
              </div>
            </div>   
            <div class="tab-content">
              <div class="product">
-              <img src="" alt=""/>
-              <p class="product-name"></p>
-              <p class="product-price"></p>
+              <img src="assets/images/Amazon_43.png" alt=""/>
+              <p class="product-name">Amazon_43</p>
+              <p class="product-price">Rs. 1,350/-</p>
               <a class="more" title="Know More">know more</a>
              </div>
            </div>                   
@@ -320,6 +318,48 @@
             <li><a href="#" title="Recipes">recipes</a></li>
           </ul>
         </div>
+        <div class="footer-part">
+          <ul>
+            <li>
+              <a href="#" title="Products">products</a>
+              <ul>
+                <li><a href="#" title="Pans">pans</a></li>
+                <li><a href="#" title="Spatulas">spatulas</a></li>
+                <li><a href="#" title="Mixings Bowl">mixings bowl</a></li>
+                <li><a href="#" title="Bakery Accesories">bakery accesories</a></li>        
+              </ul>
+            </li>
+            <li><a href="#" title="Media">media</a></li>
+          </ul>
+        </div>
+        <div class="footer-part">
+          <ul>
+            <li><a href="#" title="Contact Us">contact us</a></li>
+            <li><a href="#" title="Careers">careers</a></li>
+            <li><a href="#" title="FAQ's">faq's</a></li>
+            <li><a href="#" title="Sitemap">sitemap</a></li>
+          </ul>
+        </div>   
+        <div class="footer-part">
+          <h5>subscribe <span>today</span></h5>
+          <form action="#" method="post">
+            <input type="mail" name="mail" class="input-field">
+            <button type="button" class="btn">click</button>
+          </form>
+        </div>  
+        <!-- footer social start here -->
+        <ul class="social">
+          <li><a href="#" title="Facebook" target="_blank"><img src="" alt="Facebook"></a></li>
+          <li><a href="#" title="Facebook" target="_blank"><img src="" alt="Facebook"></a></li>
+          <li><a href="#" title="instagram" target="_blank"><img src="" alt="instagram"></a></li>                    
+        </ul>    
+        <!-- footer social end here -->
+        <div class="footer-text">
+          <p>Currently all over products are available only on Amazon.</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2017 Foodhall All Rights Reserved. Crafted by Togglehead.</p>
       </div>
     </footer>
     <!-- footer end here -->
