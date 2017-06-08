@@ -218,3 +218,15 @@ nav li a {
 }
 
 .tab li:last-child {margin-right: 0;}
+
+.tab-content {
+  width: 30%;
+  float: left;
+  margin-right: 3.333%;
+}
+
+.tab-content:last-child { margin-right: 0; }
+
+.product {
+  position: relative;
+}

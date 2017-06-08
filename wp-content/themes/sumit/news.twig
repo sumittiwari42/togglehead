@@ -1,0 +1,20 @@
+<main class="main-content">
+    <div id="primary" class="default-main">
+        <div id="content" role="main">
+        <div class="container main-container">
+        <div class="news cf">
+    <div id="ajax-posts" class="row">
+{% extends "base.twig" %}
+{% block content %}
+  <h1 class="big-title">{{foo}}</h1>
+  <h2>{{post.title}}</h2>
+  <img src="{{post.thumbnail.src}}" />
+  <div class="body"> {{post.content}} </div>
+{% endblock %}
+    </div>
+               </div>
+             </div>
+            </div><!-- #content -->
+        </div><!-- #primary -->
+        
+    </main>
