@@ -249,7 +249,7 @@ function twentyseventeen_content_width() {
 	 *
 	 * @since Twenty Seventeen 1.0
 	 *
-	 * @param $content_width integer
+	 * @param int $content_width Content width in pixels.
 	 */
 	$GLOBALS['content_width'] = apply_filters( 'twentyseventeen_content_width', $content_width );
 }
@@ -261,7 +261,7 @@ add_action( 'template_redirect', 'twentyseventeen_content_width', 0 );
 function twentyseventeen_fonts_url() {
 	$fonts_url = '';
 
-	/**
+	/*
 	 * Translators: If there are characters in your language that are not
 	 * supported by Libre Franklin, translate this to 'off'. Do not translate
 	 * into your own language.
@@ -312,9 +312,9 @@ add_filter( 'wp_resource_hints', 'twentyseventeen_resource_hints', 10, 2 );
  */
 function twentyseventeen_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'twentyseventeen' ),
+		'name'          => __( 'Blog Sidebar', 'twentyseventeen' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentyseventeen' ),
+		'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'twentyseventeen' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -349,6 +349,7 @@ add_action( 'widgets_init', 'twentyseventeen_widgets_init' );
  *
  * @since Twenty Seventeen 1.0
  *
+ * @param string $link Link to single post/page.
  * @return string 'Continue reading' link prepended with an ellipsis.
  */
 function twentyseventeen_excerpt_more( $link ) {
@@ -564,3 +565,72 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+/* Quote custom */
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+   register_post_type( 'quote',
+    array(
+      'labels' => array(
+        'name' => __( 'Quote' ),
+        'singular_name' => __( 'Quote' ),
+      ),
+      'public' => true,
+      'has_archive' => true,
+       'supports' => array('title','editor','author','thumbnail','excerpt','comments'),
+       'taxonomies' => array('category')
+
+    )
+  );
+   register_post_type( 'recipe',
+    array(
+      'labels' => array(
+        'name' => __( 'Recipes' ),
+        'singular_name' => __( 'Recipes' ),
+      ),
+      'public' => true,
+      'has_archive' => true,
+       'supports' => array('title','editor','author','thumbnail','excerpt','comments'),
+       'taxonomies' => array('category')
+
+    )
+  );
+   register_post_type( 'partner',
+    array(
+      'labels' => array(
+        'name' => __( 'Partner' ),
+        'singular_name' => __( 'Partner' ),
+      ),
+      'public' => true,
+      'has_archive' => true,
+       'supports' => array('title','editor','author','thumbnail','excerpt','comments'),
+       'taxonomies' => array('category')
+
+    )
+  );
+}
+
+
+/*REMOVE ADD TO CART BUTTON ON PRODUCT ARCHIVE */
+
+function remove_loop_button(){
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+}
+add_action('init','remove_loop_button');
+
+
+
+/*ADD NEW BUTTON THAT LINKS TO PRODUCT PAGE FOR EACH PRODUCT */
+
+add_action('woocommerce_after_shop_loop_item','replace_add_to_cart');
+function replace_add_to_cart() {
+global $product;
+$link = $product->get_permalink();
+echo '<a href="' . esc_attr($link) . '" title="Know More">know more</a>';
+}
+
+/* adding excerpt for page*/
+add_action( 'init', 'my_add_excerpts_to_pages' );
+function my_add_excerpts_to_pages() {
+     add_post_type_support( 'page', 'excerpt' );
+}
