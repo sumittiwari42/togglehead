@@ -429,12 +429,18 @@ function twentyseventeen_scripts() {
 	// Load the Internet Explorer 8 specific stylesheet.
 	wp_enqueue_style( 'twentyseventeen-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'twentyseventeen-style' ), '1.0' );
 	wp_style_add_data( 'twentyseventeen-ie8', 'conditional', 'lt IE 9' );
+	wp_enqueue_style( 'theme', get_theme_file_uri( '/assets/css/theme.css' ), array( 'twentyseventeen-style' ), '1.0' );
 
 	// Load the html5 shiv.
 	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '3.7.3' );
 	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 
 	wp_enqueue_script( 'twentyseventeen-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), array(), '1.0', true );
+
+    wp_enqueue_script( 'script', get_theme_file_uri( '/assets/js/jquery.min.js' ), array(), '1.0');
+
+	wp_enqueue_script( 'script-custom', get_theme_file_uri( '/assets/js/script.js' ), array(), '1.0', true );
+
 
 	$twentyseventeen_l10n = array(
 		'quote'          => twentyseventeen_get_svg( array( 'icon' => 'quote-right' ) ),
@@ -626,11 +632,30 @@ add_action('woocommerce_after_shop_loop_item','replace_add_to_cart');
 function replace_add_to_cart() {
 global $product;
 $link = $product->get_permalink();
-echo '<a href="' . esc_attr($link) . '" title="Know More">know more</a>';
+echo '<a href="' . esc_attr($link) . '" class="know-more know-product" title="Know More">know more</a>';
 }
 
 /* adding excerpt for page*/
 add_action( 'init', 'my_add_excerpts_to_pages' );
 function my_add_excerpts_to_pages() {
      add_post_type_support( 'page', 'excerpt' );
+}
+
+function theme_prefix_setup() {
+	
+	add_theme_support( 'custom-logo', array(
+		'height'      => auto,
+		'width'       => auto,
+		'flex-width' => true,
+	) );
+
+}
+add_action( 'after_setup_theme', 'theme_prefix_setup' );
+
+function theme_prefix_the_custom_logo() {
+	
+	if ( function_exists( 'the_custom_logo' ) ) {
+		the_custom_logo();
+	}
+
 }
