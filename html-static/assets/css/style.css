@@ -316,11 +316,176 @@ font: 400 16px/30px 'Lato';
       padding: 24px 0 40px;
 }
 
-.about-part {
-  width: 50%;
+.about-us { margin-bottom: 62px; }
+
+.about-part:first-child {
+  width: 52%;
   float: left;
+}
+
+.about-part:last-child {
+  width: 48%;
+  float: right;
+}
+
+.about-content {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.about-content p {
+  margin-bottom: 34px;
+color: #000;
+font: 400 16px/26px 'Lato';
+}
+
+.know-more {
+padding: 11px 22px 10px;
+margin-bottom: 34px;
+border-radius: 4px;
+display: inline-block;
+color: #fff;
+font: 700 12px/14px 'Lato'; 
+background: #ba5c82;
+text-transform: uppercase; 
+text-decoration: none;
 }
 
 .about-img {
   width: 100%;
 }
+
+.sponser-list li {
+width: 22%;
+margin-right: 4%;   
+float: left;
+list-style: none;
+text-align: center;
+}
+
+.sponser-list li:last-child {
+  margin-right: 0;
+}
+
+.sponser-list a {
+  min-height: 35px;
+  margin-bottom: 25px;
+      display: inline-block;
+    border: 2px solid #ebebeb;
+    padding: 34px 6px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px 5px rgba(235, 235, 235, 0.54);
+}
+
+.sponser-list li p {
+ font: 400 16px/26px 'Lato';
+ text-transform: uppercase; 
+}
+
+.insta-content {
+  width: 24.75%;
+  float: left;
+  margin-right: 0.333%;
+}
+
+.insta-content:last-child { margin-right: 0; }
+
+.insta-content img {
+  width: 100%;
+}
+
+.insta-button {
+  padding: 30px;
+  text-align: center;
+}
+
+.footer-part {
+  width: 25%;
+  float: left;
+}
+
+.footer-part li {
+margin-bottom: 20px;
+list-style: none;
+}
+
+.footer-part ul ul {
+  margin: 20px 0 0 16px;
+}
+
+.footer-part ul ul a {
+  font-weight: 400;
+}
+
+.footer-part ul ul li {
+margin-bottom: 10px;
+}
+
+.footer-part li a {
+  font: 700 16px/20px 'Lato';
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.footer-part h5 {
+font: 700 32px/55px 'Lato';
+text-transform: uppercase;
+}
+
+.footer-part h5 span {
+font: 200 32px/55px 'Lato';
+}
+
+.input-field {
+  margin-bottom: 15px;
+      outline: none;
+    border: none;
+    background: none;
+    border-bottom: 1px solid;
+    display: block;
+    width: 90%;
+    padding: 20px 0 10px;
+}
+
+.btn { 
+border: none;
+    background: #fff;
+    outline: none;
+}
+
+.social {
+  margin-top: 20px;
+  overflow: auto;
+  text-align: center;
+}
+
+.social li {
+  margin: 12px;
+  display: inline-block;
+}
+
+.footer-text { 
+      margin: 34px 0;
+  text-align: center; 
+}
+
+.footer-text p {
+  width: 60%;
+  margin: 0 auto;
+  padding: 16px;
+color: #fff;
+    font: 400 16px/26px 'Lato';
+    background: #ba5c82;
+  }
+
+.copyright {
+  background: rgba(235, 235, 235, 0.48);
+  text-align: center;
+}
+
+.copyright p {
+  padding: 14px;
+  color: #000;
+    font: 400 16px/26px 'Lato';
+}  
