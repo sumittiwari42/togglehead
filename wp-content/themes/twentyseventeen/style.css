@@ -99,6 +99,8 @@ sub { bottom: -.25em; }
   font-weight: bold;
 }
 
+#content { padding: 0 !important; }
+
  .container header {
   padding: 15px 0 0;
   background-color: #fff;
@@ -149,8 +151,9 @@ h1 {
   text-transform: uppercase;
 }
 
-.navigation-top li:hover a {
+.navigation-top li a:hover {
   color: #ba5c82;
+  transition: color 0.5s;
 }
 
 header .navigation-top {
@@ -378,6 +381,7 @@ position: absolute;
 top: 0;
 right: 0;
 background: #ba5c82; 
+transition: background 0.5s ease-in;
 }
 
 .tab li:hover:before,
@@ -525,6 +529,11 @@ font: 400 16px/30px 'Lato';
   right: 16px;
 }
 
+.recipes-content a:hover {
+	 opacity: 0.8;
+	 transition: opacity 0.5; 
+}
+
 .about-us { margin-bottom: 62px; }
 
 .about-part:first-child {
@@ -553,6 +562,7 @@ font: 400 16px/26px 'Lato';
 .know-more {
 padding: 11px 22px 10px;
 margin-bottom: 34px;
+border: 1px solid #ba5c82;
 border-radius: 4px;
 display: inline-block;
 color: #fff;
@@ -560,6 +570,13 @@ font: 700 12px/14px 'Lato';
 background: #ba5c82;
 text-transform: uppercase; 
 text-decoration: none;
+}
+
+.know-more:hover {
+	border: 1px solid #ba5c82;
+	color: #ba5c82;
+	background: #fff;
+	transition: background 0.5s ease-out;
 }
 
 .about-img {
@@ -639,14 +656,22 @@ margin-bottom: 10px;
     text-transform: uppercase;
 }
 
+.footer-part a:hover {
+  color: #ba5c82;
+  transition: color 0.2s;
+}
+
 .footer-part h5 {
 font: 700 32px/55px 'Lato';
 text-transform: uppercase;
+letter-spacing: 1px;
 }
 
 .footer-part h5 span {
 font: 200 32px/55px 'Lato';
 }
+
+.footer-part button { padding: 0; }
 
 .input-field {
   margin-bottom: 15px;
@@ -676,6 +701,11 @@ border: none;
   display: inline-block;
 }
 
+.social li:hover a {
+	opacity: 0.7;
+	transition: opacity 0.5s; 
+}
+
 .footer-text { 
       margin: 34px 0;
   text-align: center; 
@@ -697,6 +727,7 @@ color: #fff;
 
 .copyright p {
   padding: 14px;
+  margin-bottom: 0;
   color: #000;
     font: 400 16px/26px 'Lato';
 }  
@@ -795,6 +826,16 @@ line-height: 24px;
   .about-part:first-child { width: 100%; }
 
   .about-part:last-child { display: none; }
+
+  .footer-part {
+  	width: 100%;
+  	margin-top: 18px;
+  	border-bottom: 2px solid #ba5c82;
+  }
+
+  .footer-part:last-child { border-bottom: 0px solid; }
+
+  .footer-text p { width: 100%; }
 }
 
 @media screen and (max-width: 650px) {

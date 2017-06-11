@@ -659,3 +659,17 @@ function theme_prefix_the_custom_logo() {
 	}
 
 }
+
+
+function wpb_custom_new_menu() {
+  register_nav_menus(
+    array(
+      'footer-first' => __( 'Footer First Menu' ),
+      'footer-second' => __( 'Footer Second Menu' ),
+      'footer-third' => __( 'Footer Third Menu' )
+    )
+  );
+}
+add_action( 'init', 'wpb_custom_new_menu' );
+
+
