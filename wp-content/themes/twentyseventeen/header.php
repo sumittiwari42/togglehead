@@ -29,11 +29,13 @@
 		<header id="masthead" class="site-header cf" role="banner">
 			<div class="wrapper">
       <h1>
+       <a href="http://localhost/togg-test/home-2/" title="WHISQ">
         <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
         $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); ?>
       	<img src="<?php echo $image[0]; ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+      	</a>
       </h1> 
-			<?php if ( has_nav_menu( 'top' ) ) : ?>
+		  <?php if ( has_nav_menu( 'top' ) ) : ?>
 				<div class="navigation-top">
 					<div class="wrap">
 						<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
@@ -42,12 +44,12 @@
 			<?php endif; ?>
 	    <div class="search">
 	      <form action="#" method="post">
-	      	<input type="text" class="input-control" name="text"/>
-	          <button type="button" class="input-control search-btn" name="btn"><img src="wp-content/uploads/search.png" alt="search"></button>
+	      	  <input type="text" class="input-control" name="text"/>
+	          <button type="button" class="input-control search-btn" name="btn"><img src="../wp-content/uploads/search.png" alt="search"></button>
 	      </form>
 	    </div>		
-
 	    </div>
+	    <?php echo do_shortcode( '[wcas-search-form]' );  ?>
 		</header><!-- #masthead -->
 
 	<?php

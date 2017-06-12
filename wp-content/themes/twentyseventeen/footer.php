@@ -51,15 +51,15 @@
             <h5>subscribe <span>today</span></h5>
             <form action="#" method="post">
               <input type="mail" name="mail" placeholder="enter your email id" class="input-field">
-              <button type="button" class="btn"><img src="wp-content/uploads/email.png"></button>
+              <button type="button" class="btn"><img src="../wp-content/uploads/email.png"></button>
             </form>
           </div>
         </div>  
         <!-- footer social start here -->
         <ul class="social">
-          <li><a href="#" title="Facebook" target="_blank"><img src="wp-content/uploads/fb.png" alt="Facebook"></a></li>
-          <li><a href="#" title="Pin" target="_blank"><img src="wp-content/uploads/pin.png" alt="Pin"></a></li>
-          <li><a href="#" title="instagram" target="_blank"><img src="wp-content/uploads/insta.png" alt="instagram"></a></li>                    
+          <li><a href="#" title="Facebook" target="_blank"><img src="../wp-content/uploads/fb.png" alt="Facebook"></a></li>
+          <li><a href="#" title="Pin" target="_blank"><img src="../wp-content/uploads/pin.png" alt="Pin"></a></li>
+          <li><a href="#" title="instagram" target="_blank"><img src="../wp-content/uploads/insta.png" alt="instagram"></a></li>                    
         </ul>    
         <!-- footer social end here -->
         <div class="footer-text">

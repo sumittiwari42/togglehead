@@ -14,10 +14,11 @@
 						while ( $post_list->have_posts() ) : $post_list->the_post();?>
 						  <li>
 						    <?php the_post_thumbnail() ?>
-<!-- 						    <div class="quote-content">
+    				    <div class="post-slide-content">
+						    	<h3 class="head"> <?php the_title(); ?> </h3>
 						    	<?php the_excerpt(); ?>
-						    	<p class="name"> <?php the_title(); ?> </p>
-						    </div> -->
+						    	<a class="know-more" href="<?php get_the_permalink(); ?>" title="Know More">Know More</a>
+						    </div> 
 						  </li>
 						  <?php
 						wp_reset_postdata();  
@@ -198,16 +199,16 @@
       <div class="insta-feed">
         <div class="insta-list cf">
           <div class="insta-content">
-            <img src="wp-content/uploads/insta1.png" alt="insta"/>
+            <img src="../wp-content/uploads/insta1.png" alt="insta"/>
           </div>
           <div class="insta-content">
-            <img src="wp-content/uploads/insta2.jpg" alt="insta"/>
+            <img src="../wp-content/uploads/insta2.jpg" alt="insta"/>
           </div>
           <div class="insta-content">
-            <img src="wp-content/uploads/insta3.jpg" alt="insta"/>
+            <img src="../wp-content/uploads/insta3.jpg" alt="insta"/>
           </div>
           <div class="insta-content">
-            <img src="wp-content/uploads/insta4.png" alt="insta"/>
+            <img src="../wp-content/uploads/insta4.png" alt="insta"/>
           </div>
         </div>
         <div class="insta-button">

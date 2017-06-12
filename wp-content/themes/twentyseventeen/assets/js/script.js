@@ -36,10 +36,6 @@ $(document).ready(function(){
       $(this).addClass('active');
     });
 
-    // $(".tab li").hover(function(){
-    //   $(this).after("<span></span>");
-    //   $(".tab li span").remove();
-    // });
 
     var curindex = 0;
 	var items1 = $(".quote-slider li");
@@ -48,7 +44,9 @@ $(document).ready(function(){
 	function cycle1(){
 		var item1 = items1.eq(curindex);
 		items1.hide();
+		items1.removeClass("open");
 		item1.css("display","inline-block");
+		item1.addClass("open");
 	}
 
 	/* auto slide*/
@@ -60,14 +58,15 @@ $(document).ready(function(){
 		}
 		cycle1();
 	}, 3000);
-
+    
+    $(".dgwt-wcas-search-wrapp").addClass("input-slide-remove");
 	$(".search-btn").click(function(){
-	  if($(".search input").hasClass("input-slide")) {
-	  	$(".search input").addClass("input-slide-remove");
-	  	$(".search input").removeClass("input-slide");
+	  if($(".dgwt-wcas-search-wrapp").hasClass("input-slide")) {
+	  	$(".dgwt-wcas-search-wrapp").addClass("input-slide-remove");
+	  	$(".dgwt-wcas-search-wrapp").removeClass("input-slide");
 	  } else {
-        $(".search input").addClass("input-slide");
-        $(".search input").removeClass("input-slide-remove");
+        $(".dgwt-wcas-search-wrapp").addClass("input-slide");
+        $(".dgwt-wcas-search-wrapp").removeClass("input-slide-remove");
 	  }
 	});
 });
